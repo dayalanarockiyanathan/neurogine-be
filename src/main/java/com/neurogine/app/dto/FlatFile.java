@@ -3,7 +3,10 @@ package com.neurogine.app.dto;
 import org.beanio.annotation.Field;
 
 public class FlatFile {
-	@Field(length = 1, at = 0, name = "Type of the Header") // notes are not available in the latest version
+	// notes are not available in the latest version
+	// Start location was 0 as per the given test.txt file
+	
+	@Field(length = 1, at = 0, name = "Type of the Header") 
 	private String recordTypeHeader;
 
 	@Field(length = 15, at = 13, name = "Flat File Type")
