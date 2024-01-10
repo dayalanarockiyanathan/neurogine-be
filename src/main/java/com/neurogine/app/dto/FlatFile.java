@@ -2,6 +2,13 @@ package com.neurogine.app.dto;
 
 import org.beanio.annotation.Field;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@Setter
+@Getter
 public class FlatFile {
 	// notes are not available in the latest version
 	// Start location was 0 as per the given test.txt file
@@ -24,52 +31,5 @@ public class FlatFile {
 	@Field(length = 15, at = 13, name = "Flat File Type")
 	private String fileTypeTail;
 
-	public String getRecordTypeHeader() {
-		return recordTypeHeader;
-	}
-
-	public void setRecordTypeHeader(String recordTypeHeader) {
-		this.recordTypeHeader = recordTypeHeader;
-	}
-
-	public String getFileTypeHeader() {
-		return fileTypeHeader;
-	}
-
-	public void setFileTypeHeader(String fileTypeHeader) {
-		this.fileTypeHeader = fileTypeHeader;
-	}
-
-	public String getReferenceNumber() {
-		return referenceNumber;
-	}
-
-	public void setReferenceNumber(String referenceNumber) {
-		this.referenceNumber = referenceNumber;
-	}
-
-	public String getAmount() {
-		return amount;
-	}
-
-	public void setAmount(String amount) {
-		this.amount = amount;
-	}
-
-	public String getRecordTypeTail() {
-		return recordTypeTail;
-	}
-
-	public void setRecordTypeTail(String recordTypeTail) {
-		this.recordTypeTail = recordTypeTail;
-	}
-
-	public String getFileTypeTail() {
-		return fileTypeTail;
-	}
-
-	public void setFileTypeTail(String fileTypeTail) {
-		this.fileTypeTail = fileTypeTail;
-	}
 
 }
