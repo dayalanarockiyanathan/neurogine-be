@@ -1,0 +1,28 @@
+<beanio xmlns="http://www.beanio.org/2012/03"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+	<stream name="flatFile" format="fixedlength">
+		<!-- Header Record -->
+		<record name="header" class="com.neurogine.app.dto.FlatFile"
+			minOccurs="1" maxOccurs="1" >
+			 <field name="recordTypeHeader" length="2" at="0"/>
+            <field name="fileTypeHeader" length="15" at="13"/>
+		</record>
+
+		<!-- Body Record -->
+		<record name="body" class="com.neurogine.app.dto.FlatFile" minOccurs="1"
+			maxOccurs="unbounded">
+			<field name="referenceNumber" length="15" at="19"/>
+            <field name="amount" length="17" at="39"/>
+		</record>
+
+		<!-- Tail Record -->
+		<record name="tail" class="com.neurogine.app.dto.FlatFile" minOccurs="1"
+			maxOccurs="1"  >
+			 <field name="recordTypeTail" length="2" at="0"/>
+            <field name="fileTypeTail" length="15" at="13"/>
+		</record>
+	</stream>
+
+</beanio>
